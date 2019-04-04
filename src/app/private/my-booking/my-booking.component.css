@@ -1,0 +1,17 @@
+  .btn1{
+    border:1px solid black;
+  background-color:MediumSeaGreen;
+  margin-left: 2px;
+  margin-right: 2px;
+  height:40px;
+  width:20%;
+  }
+  .btn2{
+    border:1px solid black;
+  background-color:#FFEBCD;
+  
+  margin-right: 2px;
+  height:40px;
+  width:20%;
+  }
+  

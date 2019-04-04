@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<div class="container register-form" >
+    <div class="center form">
+        <div class="note">
+            <p></p>
+        </div>
+        <div class="form-content">
+
+            <form class="login-form" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+                <div class="row" *ngIf="load">
+                    <div class="col s12 left">
+                        <h3 class="left login-form-text">REGISTER</h3>
+                    </div>
+                    <hr>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstname" class="center-align">FIRST NAME</label>
+                            <input type="text" class="form-control" value="firstname" formControlName="firstname"/>
+                            <div class="alert" *ngIf="!registerForm.controls['firstname'].valid && registerForm.controls['firstname'].touched">{{ titleAlert }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="center-align">E-MAIL ADDRESS</label>
+                            <input type="email" class="form-control" value="email" formControlName="email"/>
+                            <div class="alert" *ngIf="!registerForm.controls['email'].valid && registerForm.controls['email'].touched">{{ titleAlert }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lastname" class="center-align">LAST NAME</label>
+                            <input type="text" class="form-control" value="lastname" formControlName="lastname"/>
+                            <div class="alert" *ngIf="!registerForm.controls['lastname'].valid && registerForm.controls['lastname'].touched">{{ titleAlert }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="center-align">PHONE NUMBER</label>
+                            <input type="number" class="form-control" value="phone" formControlName="phone"/>
+                            <div class="alert" *ngIf="!registerForm.controls['phone'].valid && registerForm.controls['phone'].touched">{{ titleAlert }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="address" class="center-align">ADDRESS</label>
+                            <input type="text" class="form-control" value="address" formControlName="address"/>
+                            <div class="alert" *ngIf="!registerForm.controls['address'].valid && registerForm.controls['address'].touched">{{ titleAlert }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="center-align">PASSWORD</label>
+                            <input type="password" class="form-control" value="password" formControlName="password"/>
+                            <p class="bg-danger" *ngIf="registerForm.controls.password.errors?.required && registerForm.controls.password.touched">Password is required</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="medical" class="center-align">MEDICAL HISTORY</label>
+                            <input type="text" class="form-control" value="medical" formControlName="medical"/>
+                            <div class="alert" *ngIf="!registerForm.controls['medical'].valid && registerForm.controls['medical'].touched">{{ titleAlert }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="repassword" class="center-align">RE-TYPE PASSWORD</label>
+                            <input type="password" class="form-control" value="repassword" formControlName="repassword"/>
+                            <p class="bg-danger" *ngIf="registerForm.controls.repassword.errors?.required && registerForm.controls.repassword.touched">Repeat password is required</p>
+                            <p class="bg-danger" *ngIf="registerForm.errors?.doesMatchPassword">Password does not match</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <button type="submit" class="btnSubmit center" [disabled]="!registerForm.valid">REGISTER</button>
+                </div>
+            </form>
+            <div class="col s12">
+                <p class="margin center medium-small sign-up">Already have an account? <a routerLink="/login">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>

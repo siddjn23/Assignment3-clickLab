@@ -1,0 +1,117 @@
+{
+  "posts": [
+    {
+      "firstname": "sid",
+      "emailid": "siddjn23@gmail.com",
+      "phone": "9406969700",
+      "medical": "no mediacal bbb",
+      "address": "vidya sagar nagar choudhran colony",
+      "validate": "",
+      "id": 1
+    },
+    {
+      "firstname": "sdb,mslbmrsknbmsknmknmnk",
+      "lastname": "sdknmksnmdsknmsdknmsdknmsdn",
+      "email": "sdknmsknmsdknmsdknsmdnksmdn",
+      "phone": 45484848484841,
+      "address": ",ds,ghsdlhdhsdlhmsdhmsdhsh",
+      "medical": "dshmskdhmsdkhdmshksdmhksdmh",
+      "password": "5154151515",
+      "repassword": "sdhkmsdkhmdkmdskhmsdkdmshksd",
+      "id": 2
+    },
+    {
+      "firstname": "mun",
+      "emailid": "munia",
+      "phone": 9426147895,
+      "medical": "asdafadfadfadfdfdafaa",
+      "address": "jaypee university of engineering and technology",
+      "validate": "",
+      "id": 3
+    },
+    {
+      "firstname": "munia",
+      "lastname": "mun",
+      "email": "mun",
+      "phone": "9406969700",
+      "address": "jaypee university of engineering and technology",
+      "medical": "akdhnaudhnaikdakncakcnc",
+      "password": "1234567890",
+      "repassword": "1234567890",
+      "id": 4,
+      "emailid": "mun",
+      "validate": ""
+    },
+    {
+      "firstname": "sidu",
+      "lastname": "sid",
+      "email": "sid",
+      "phone": 9406969700,
+      "address": "jaypee university of engineering and technology",
+      "medical": "asdajdnajsdbajdbadjba",
+      "password": "1234567890",
+      "repassword": "1234567890",
+      "id": 5,
+      "emailid": "sid",
+      "validate": ""
+    },
+    {
+      "firstname": "akshay(papa)",
+      "lastname": "jain",
+      "email": "akshaygna@gmail.com",
+      "phone": 1234567890,
+      "address": "jaypee university of engineering and technology",
+      "medical": "asdfghjklzxcvbnmqwertyuiop",
+      "password": "1234567890",
+      "repassword": "1234567890",
+      "id": 6,
+      "emailid": "akshaygna@gmail.com",
+      "validate": ""
+    }
+  ],
+  "Bookings": [
+    {
+      "id": 6,
+      "upcoming": [
+        {
+          "date": "13 Jun 2017,09:00am",
+          "name": "Siddharth",
+          "adress": "Chandigarh",
+          "status": "PENDING"
+        },
+        {
+          "date": "27 Sep 2017,09:00am",
+          "name": "Sakshi",
+          "adress": "Pune",
+          "status": "On The Way"
+        },
+        {
+          "date": "13 Jun 2017,09:00am",
+          "name": "Aditi",
+          "adress": "Guna",
+          "status": "PENDING"
+        }
+      ],
+      "past": [
+        {
+          "date": "27 Sep 2017,09:00am",
+          "name": "Shivam",
+          "adress": "Delhi",
+          "status": "On The Way"
+        },
+        {
+          "date": "13 Jun 2017,09:00am",
+          "name": "Sumit",
+          "adress": "Banglore",
+          "status": "PENDING"
+        },
+        {
+          "date": "27 Sep 2017,09:00am",
+          "name": "Salil",
+          "adress": "Goa",
+          "status": "On The Way"
+        }
+      ]
+    }
+  ]
+}

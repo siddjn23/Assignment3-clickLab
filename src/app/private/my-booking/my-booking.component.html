@@ -1,0 +1,50 @@
+
+<app-header></app-header>
+
+<h3 class="text-danger text-center">MY BOOKINGS</h3>
+<br>
+<br>
+<hr>
+<div class="container col-md-10 col-md-offset-2">
+  <div class="pack">
+<div class="col-md-offset-2">
+    <button  id="upcoming" class="btn1" (click)="postProfile()">UPCOMING</button>
+    <button  id="past" class="btn2" (click)="toggle_bookings()">PAST</button>
+</div>
+
+<hr>
+
+<br>
+<div *ngIf="toggle_upcoming">
+<div class="col-md-8"*ngFor="let upcoming_details of upcoming_bookings">
+  <h5 class="text-success">{{upcoming_details.date}}</h5>
+<br>
+  <h3>{{upcoming_details.name}}</h3>
+  
+
+<h4 *ngIf="upcoming_details.status=='PENDING'" class="text-danger text-center col-md-offset-8 bor"><span class="glyphicon glyphicon-time"></span>  {{upcoming_details.status}}</h4>
+<h4 *ngIf="upcoming_details.status=='On The Way'" class="text-primary text-center col-md-offset-8 bor">  {{upcoming_details.status}}</h4>
+  <h5 class="text-success">{{upcoming_details.adress}}</h5>
+
+<hr>
+
+
+</div>
+</div>
+<div *ngIf="toggle_past">
+  <div class="po col-md-8"*ngFor="let past_details of past_bookings">
+    <h5 class="text-success">{{past_details.date}}</h5>
+  <br>
+    <h3>{{past_details.name}}</h3>
+
+  <h4 *ngIf="past_details.status=='PENDING'" class="text-danger text-center col-md-offset-8 bor"><span class="glyphicon glyphicon-time"></span>  {{past_details.status}}</h4>
+  <h4 *ngIf="past_details.status=='On The Way'" class="text-primary text-center col-md-offset-8 bor">  {{past_details.status}}</h4>
+    <h5 class="text-success">{{past_details.adress}}</h5>
+    <hr>
+
+  </div>
+  
+
+</div>
+</div>
+</div>

@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<app-header> </app-header>
+<div class="container profile-form" >
+    <div>
+        <div>
+            <h3>MY PROFILE</h3>
+        </div>
+        <div>
+
+            <form class="login-form" [formGroup]="pForm" (ngSubmit)="updateUser(pForm.value)">
+                <div class="row" *ngIf="load">
+                    <div class="col s12 left">
+                        <hr>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstname" class="center-align">FIRST NAME</label>
+                            <input type="text" class="form-control" value="firstname" formControlName="firstname"/>
+                            <div class="alert" *ngIf="!pForm.controls['firstname'].valid && pForm.controls['firstname'].touched">{{ titleAlert }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="center-align">PHONE NUMBER</label>
+                            <input type="text" class="form-control" value="phone" formControlName="phone"/>
+                            <div class="alert" *ngIf="!pForm.controls['phone'].valid && pForm.controls['phone'].touched">{{ titleAlert }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="emailad" class="center-align">E-MAIL</label>
+                            <input type="text" class="form-control" value="emailad" formControlName="emailid"/>
+                            <div class="alert" *ngIf="!pForm.controls['emailid'].valid && pForm.controls['emailid'].touched">{{ titleAlert }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" class="center-align">ADDRESS</label>
+                            <input type="text" class="form-control" value="address" formControlName="address"/>
+                            <div class="alert" *ngIf="!pForm.controls['address'].valid && pForm.controls['address'].touched">{{ titleAlert }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="medical" class="center-align">MEDICAL HISTORY</label>
+                            <input type="text" class="form-control" value="medical" formControlName="medical"/>
+                            <div class="alert" *ngIf="!pForm.controls['medical'].valid && pForm.controls['medical'].touched">{{ titleAlert }}</div>
+                        </div>
+                        
+                      </div>    
+                      <div  class="form-group" >
+                          <button type="submit" class="btnSubmit center" [disabled]="!pForm.valid">SUBMIT</button>
+                      </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
