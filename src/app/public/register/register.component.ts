@@ -30,19 +30,19 @@ constructor(private fb: FormBuilder, private route: Router, private registerServ
       phone: [null, Validators.required],
       address: ['', Validators.required],
       medical: ['', Validators.required],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(200)])],
-      repassword: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(200)])]
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(200)])],
+      repassword: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(200)])]
     });
   }
 
-  registerUser =  function (user){
+  registerUser =  function (user){                                              //this is called when the form is submitted
     console.log(user);
-    this.registerService.registerNewUser(user).subscribe(
+    this.registerService.registerNewUser(user).subscribe(                       //registerNewUser is called using register service which is defined in service folder this post the data in dbJson file 
       (response) => console.log(response),
       (error) => console.log(error),
       
       );
-      this.route.navigate(["login"]);
+      this.route.navigate(["login"]);                                           //if every things goes well it will redirect to login
       
   }
 

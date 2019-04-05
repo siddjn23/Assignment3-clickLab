@@ -30,17 +30,17 @@ export class LoginComponent implements OnInit {
       });
     }
 
-    onSubmit() {
-      console.log(this.loginForm.value);
-      this.loginget.getuser(this.loginForm.value).subscribe(res => {
+    onSubmit() {                                                        
+      //console.log(this.loginForm.value);
+      this.loginget.getuser(this.loginForm.value).subscribe(res => {      //this will call GET request which is in Services/Login Service 
         this.getData = res;
         if ((Object.keys(res).length)==0)
         {
           console.log("invalid user");
         }
-        else
+        else                                                              
         {
-          console.log(res);
+          
           localStorage.setItem("user_info",JSON.stringify(res));
           localStorage.setItem("loggedIn","true");
           this.router.navigate(['Profile']);
